@@ -1,8 +1,8 @@
 <?php
-include_once('./Global_Files/session.php');
-include_once('./Global_Files/globalSettings.php');
+// include_once('./Global_Files/session.php');
+// include_once('./Global_Files/globalSettings.php');
 
-include_once('./header.php');
+include_once('./hooks/header.php');
 ?>
 	<body>
 		
@@ -13,15 +13,10 @@ include_once('./header.php');
 			
 		</div>
 		
-		<div id="workspace">
-
-				<?php 
-				include_once('./lib/ProjectBar/ProjectBar.php'); 
-				include_once('./lib/ArchSelect/ArchSelect.php');      
-				//include_once('./lib/ProjectBar/OpenExhibit.php');
-				//include_once('./lib/ProjectBar/SaveExhibit.php');
-				
-				?>
-		</div>
+		<div id="workspace"></div>
+		
+		<?php
+			include_once('hooks/start.php');
+		?>
     </body>
 </html>
